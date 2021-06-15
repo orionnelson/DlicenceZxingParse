@@ -1,3 +1,8 @@
+
+
+PYTHON 3 SCRIPT REQUIRES PYTHON 3 
+~ Download Here https://www.python.org/downloads/ 
+
 #INSTRUCTIONS ON USAGE
 CALLING WITHING THE GIVEN FOLDER 
 Dlicence.py --image somelicence.jpg or png
