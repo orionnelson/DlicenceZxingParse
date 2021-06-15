@@ -13,3 +13,9 @@ pip install -r requirements.txt
 Read about it here 
 
 https://www.or9.ca/blog/opencv-update/
+
+
+CODE USED IN THIS PROJECT
+https://github.com/rechner/py-aamva # AAMVA PARSING FOR CANADIAN LICENCE
+
+https://github.com/zxing/zxing  # ZEBRA CROSSING BARCODE READER
