@@ -14,8 +14,7 @@ Requires Zxing-master and some other things.
 
 pip install -r requirements.txt 
 
-**Configure Zxing Barcode Reader and Add it to Path For Parsing the files and Place it inside of the zxing-master location
-
+**Configure Zxing Barcode Reader and Add it to Path For Parsing the files
 
 Read about it here 
 
