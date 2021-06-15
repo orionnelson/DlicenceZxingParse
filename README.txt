@@ -7,7 +7,7 @@ Dlicence.py --image somelicence.jpg or png
 Licence is not Upsidown -
 All four Corners are visible - 
 Photo is not potato resolution -
-There is No reflection off the barcode -
+There is No reflection off the licence -
 
 Takes licence and uses OpenCV to Find a Barcode then crop to it
 Requires Zxing-master and some other things.
