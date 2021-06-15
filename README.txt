@@ -7,4 +7,4 @@ Requires Zxing-master and some other things.
 
 pip install -r requirements.txt 
 
-**Configure Zxing Barcode Reader and Add it to Path For Parsing the Converted Codes
+**Configure Zxing Barcode Reader and Add it to Path For Parsing the files.
