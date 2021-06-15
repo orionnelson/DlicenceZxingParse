@@ -14,8 +14,6 @@ Requires Zxing-master and some other things.
 
 pip install -r requirements.txt 
 
-**Configure Zxing Barcode Reader and Add it to Path For Parsing the files
-
 Read about it here 
 
 https://www.or9.ca/blog/opencv-update/
