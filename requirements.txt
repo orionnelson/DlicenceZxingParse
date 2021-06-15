@@ -1,0 +1,8 @@
+matplotlib==3.3.4
+imutils==0.5.4
+numpy==1.19.5
+opencv_python==4.5.2.52
+pyzxing==1.0.1
+scipy==1.5.4
+Pillow==8.2.0
+pyserial==3.5
