@@ -258,7 +258,7 @@ def findbarcode(image):
     x, y, w, h = cv2.boundingRect(maxcontour)
     ah, aw = 25, 135 # padding for bounding box because rotation comes next
     roi = early[y-int(ah/2):int(y+h+ah/2), x-int(aw/2):int(x+w+aw/2)]
-    cv2.imshow('ROI',roi)
+    if debug: cv2.imshow('ROI',roi)
     # Perform transformation using the angle of the barcode note
     #sometimes cv is stupid and the barcode is given a rotation of ~90 if the rectangle uses its largest edge as height. 
     angle = maxrect[2] # 2 specifies angle
