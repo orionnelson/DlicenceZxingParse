@@ -8,8 +8,8 @@ CALLING WITHING THE GIVEN FOLDER
 Dlicence.py --image somelicence.jpg or png
 
 #Preconditions :
-
-![Upsidown](http://or9.ca/images/IncorrectCard2.jpg?raw=true)
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Upsidown](http://or9.ca/images/IncorrectCard2.png)
 Licence is not Upsidown -
 ![All Corners Visible](http://or9.ca/images/IncorrectCard1.jpg?raw=true)
 All four Corners are visible - 
