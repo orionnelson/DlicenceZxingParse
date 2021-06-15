@@ -2,7 +2,7 @@
 CALLING WITHING THE GIVEN FOLDER 
 Dlicence.py --image somelicence.jpg or png
 
-Takes licence and uses OpenCV to Find Barcode the barcode and crop to it
+Takes licence and uses OpenCV to Find a Barcode then crop to it
 Requires Zxing-master and some other things.
 
 pip install -r requirements.txt 
