@@ -6,8 +6,19 @@ PYTHON 3 SCRIPT REQUIRES PYTHON 3
 CALLING WITHING THE GIVEN FOLDER 
 Dlicence.py --image somelicence.jpg or png
 
+
+
+
+
+
+
+
+
+
+
+
+
 #Preconditions :
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 ![Upsidown](http://or9.ca/images/IncorrectCard2.png)
 Licence is not Upsidown -
 ![All Corners Visible](http://or9.ca/images/IncorrectCard1.jpg?raw=true)
