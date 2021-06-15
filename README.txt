@@ -9,19 +9,19 @@ Dlicence.py --image somelicence.jpg or png
 
 #Preconditions :
 
-![Upsidown](http://or9.ca/images/IncorrectCard2.jpg)
+![Upsidown](http://or9.ca/images/IncorrectCard2.jpg?raw=true)
 Licence is not Upsidown -
-![All Corners Visible](http://or9.ca/images/IncorrectCard1.jpg)
+![All Corners Visible](http://or9.ca/images/IncorrectCard1.jpg?raw=true)
 All four Corners are visible - 
 
 There is No reflection off the licence -
-![No Reflection](http://or9.ca/images/IncorrectCard3.jpg)
+![No Reflection](http://or9.ca/images/IncorrectCard3.jpg?raw=true)
 
 
 Usage Cases
-![Centered Card with Good Lighting](http://or9.ca/images/CorrectCard.jpg)
+![Centered Card with Good Lighting](http://or9.ca/images/CorrectCard.jpg?raw=true)
 Centered Card with Good Lighting
-![Rotated Card with Good Lighting](http://or9.ca/images/CorrectCard2.jpg)
+![Rotated Card with Good Lighting](http://or9.ca/images/CorrectCard2.jpg?raw=true)
 Rotated Card with Good Lighting
 
 
