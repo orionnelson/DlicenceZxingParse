@@ -6,6 +6,12 @@ import cv2
 import matplotlib.pyplot as plt
 from scipy.spatial import distance as dist
 
+debug = False
+
+
+
+
+
 #Pre Image Processing Before Find Barcode is Used Taken From https://www.pyimagesearch.com/2014/08/25/4-point-opencv-getperspective-transform-example/
 
 def order_points(pts):
@@ -43,8 +49,8 @@ def cropreturn(image):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     gray = cv2.bilateralFilter(gray, 11, 17, 17)
     edged = cv2.Canny(gray, 75, 400,4)
-    cv2.imshow("edged",edged)
-    cv2.waitKey(0)
+    if debug: cv2.imshow("edged",edged)
+    if debug: cv2.waitKey(0)
     cnts = cv2.findContours(edged.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     cnts = imutils.grab_contours(cnts)
     #print(cnts)
@@ -69,8 +75,8 @@ def cropreturn(image):
                 #print("Set New Card")
         if(bigcontour is not None):
                cv2.drawContours(image, [box], -1, (0, 255, 0), 3)
-               cv2.imshow("Card Found", image)
-               cv2.waitKey(0)
+               if debug: cv2.imshow("Card Found", image)
+               if debug: cv2.waitKey(0)
                #print(rect)
     #print(screenCnt)
     if screenCnt is not None:
@@ -81,8 +87,8 @@ def cropreturn(image):
             dst_pts = np.array([[0, 0],   [1920, 0],  [1920, 1080], [0, 1080]], dtype=np.float32)
             M = cv2.getPerspectiveTransform(screenCnt, dst_pts)
             warp = cv2.warpPerspective(orig, M, (1920, 1080))
-            cv2.imshow("Card Found", warp)
-            cv2.waitKey(0)
+            if debug: cv2.imshow("Card Found", warp)
+            if debug: cv2.waitKey(0)
             if(warp is not None):
                     return warp
             else:
@@ -184,14 +190,14 @@ def findbarcode(image):
     loc = np.where( res >= threshold)
     for pt in zip(*loc[::-1]):
         closed2 = cv2.rectangle(gray, pt, (pt[0] + w, pt[1] + h), (0,0,0), -1)
-    cv2.imshow("Patterm Match", closed2)
+    if debug: cv2.imshow("Patterm Match", closed2)
     (_, closed3) = cv2.threshold(closed2, 1, 255, cv2.THRESH_BINARY)
-    cv2.imshow("Patterm Match2", gray)
+    if debug: cv2.imshow("Patterm Match2", gray)
     #invert closed 3
     closed4 = cv2.bitwise_not(closed3)
-    cv2.imshow("Patterm Match3", closed4)
+    if debug: cv2.imshow("Patterm Match3", closed4)
     gray = cv2.bitwise_and(graycopy,closed4,closed4)
-    cv2.imshow("rejectedmask", gray)
+    if debug: cv2.imshow("rejectedmask", gray)
     
     cv2.waitKey(0)
     # compute the Scharr gradient magnitude representation of the images
@@ -240,12 +246,12 @@ def findbarcode(image):
                         pass
                 i = i + 1
     spotted = cv2.drawContours(image.copy(), contours, -1, (0, 255, 0), 2)
-    cv2.imshow("found contours", spotted)
+    if debug: cv2.imshow("found contours", spotted)
     #cnts = imutils.grab_contours(cnts)
     #c = sorted(cnts, key = cv2.contourArea, reverse = True)[0]
     # compute the rotated bounding box of the largest contour
-    cv2.imshow("Image", closed)
-    cv2.waitKey(0)
+    if debug: cv2.imshow("Image", closed)
+    if debug: cv2.waitKey(0)
     #print(image.shape)
     #print(maxrect)
     rect = maxrect
@@ -263,7 +269,7 @@ def findbarcode(image):
     M = cv2.getRotationMatrix2D((cols/2,rows/2),angle,1)
     img_rot = cv2.warpAffine(roi,M,(cols,rows), borderValue=(255,255,255))
 
-    cv2.imshow('Rotated image',img_rot)
+    if debug: cv2.imshow('Rotated image',img_rot)
     cimg = img_rot
 
 
@@ -280,9 +286,9 @@ def findbarcode(image):
     box3 = np.int0(box3)
     
     spotted2 = cv2.drawContours(image.copy(), [box3], -1, (0, 255, 0), 3)
-    cv2.imshow("spot 2", spotted2 )
+    if debug: cv2.imshow("spot 2", spotted2 )
     obx = order_points(box3)
-    cv2.imshow("early", early)
+    if debug: cv2.imshow("early", early)
     
     auto_result, alpha, beta = automatic_brightness_and_contrast(cimg)
     cimg = auto_result
@@ -301,9 +307,9 @@ def findbarcode(image):
         if val< 10800:
             thresh[:,idx] = 0
     (_, thresh2) = cv2.threshold(thresh, 128, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
-    cv2.imshow("OTSU Mean Adjusted Image", thresh2)
+    if debug: cv2.imshow("OTSU Mean Adjusted Image", thresh2)
     output = thresh2
-    cv2.waitKey(0)
+    if debug: cv2.waitKey(0)
     return output
     
 
