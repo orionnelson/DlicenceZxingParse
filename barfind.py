@@ -153,7 +153,7 @@ def cropreturn(image):
             # Card is Sideways
             if(sideways):
                     warp = cv2.warpPerspective(orig, M, (1080, 1920))
-                    if(lbox[0][1] > lbox[1][1]):
+                    if(lbox[0][1] < lbox[1][1]):
                             warp = cv2.rotate(warp, cv2.ROTATE_90_CLOCKWISE)
                     else:
                             warp = cv2.rotate(warp, cv2.ROTATE_90_COUNTERCLOCKWISE)
