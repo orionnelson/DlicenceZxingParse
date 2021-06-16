@@ -156,7 +156,7 @@ def cropreturn(image):
                     if(lbox[0][1] > lbox[1][1]):
                             warp = cv2.rotate(warp, cv2.ROTATE_90_CLOCKWISE)
                     else:
-                            warp = cv2.rotate(warp, cv2.ROTATE_90)
+                            warp = cv2.rotate(warp, cv2.ROTATE_90_COUNTERCLOCKWISE)
             else:
                     warp = cv2.warpPerspective(orig, M, (1920, 1080))
             if debug: cv2.imshow("Card Found", warp)
