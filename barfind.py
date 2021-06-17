@@ -258,7 +258,7 @@ def findbarcode(image):
     w, h = template.shape[::-1]
     graycopy = gray.copy()
     res = cv2.matchTemplate(gray,template,cv2.TM_CCOEFF_NORMED)
-    threshold = 0.0425
+    threshold = 0.0385
     loc = np.where( res >= threshold)
     for pt in zip(*loc[::-1]):
         closed2 = cv2.rectangle(gray, pt, (pt[0] + w, pt[1] + h), (0,0,0), -1)
